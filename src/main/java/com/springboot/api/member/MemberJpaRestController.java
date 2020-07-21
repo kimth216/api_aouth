@@ -15,6 +15,11 @@ package com.springboot.api.member;
   import java.util.List;
   import java.util.Optional;
 
+  /**
+   * MemberJpaRestController 
+   * Created by TaeHyoung Kim on 2020-07-21
+  **/
+  
   @RestController
   @RequestMapping("member")
   public class MemberJpaRestController {

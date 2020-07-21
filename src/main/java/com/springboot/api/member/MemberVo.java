@@ -4,6 +4,10 @@ import lombok.*;
 
 import javax.persistence.*;
 
+/**
+ * MemberVo
+ * Created by TaeHyoung Kim on 2020-07-21
+**/
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

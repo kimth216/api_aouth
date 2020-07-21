@@ -5,7 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
+/**
+ * MemberRepository 
+ * Created by TaeHyoung Kim on 2020-07-21
+**/
 @Repository
 public interface MemberRepository extends JpaRepository<MemberVo, Long> {
 
