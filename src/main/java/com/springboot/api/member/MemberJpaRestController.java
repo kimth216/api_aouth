@@ -1,6 +1,6 @@
 package com.springboot.api.member;
 
-
+  import io.swagger.annotations.ApiOperation;
   import org.slf4j.Logger;
   import org.slf4j.LoggerFactory;
   import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +31,7 @@ package com.springboot.api.member;
 
     // 모든 회원 조회
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+    @ApiOperation(value = "모든 회원 조회")
     public ResponseEntity<List<Member>> getAllmembers() {
       List<Member> member = memberService.findAll();
       return new ResponseEntity<List<Member>>(member, HttpStatus.OK);

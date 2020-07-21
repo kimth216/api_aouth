@@ -54,41 +54,4 @@ public class MemberServiceImpl implements MemberService{
       memberRepository.save(member);
     }
   }
-
-
-//  @Override
-//  public List<MemberVo> findAll() {
-//    List<MemberVo> members = new ArrayList<>();
-//    memberRepository.findAll().forEach(e -> members.add(e));
-//    return members;
-//  }
-//
-//  @Override
-//  public Optional<MemberVo> findById(Long mbrNo) {
-//    Optional<MemberVo> member = memberRepository.findById(mbrNo);
-//    return member;
-//  }
-//
-//  @Override
-//  public void deleteById(Long mbrNo) {
-//    memberRepository.deleteById(mbrNo);
-//  }
-//
-//  @Override
-//  public MemberVo save(MemberVo member) {
-//    // MemberVo memberVo = modelMapper.map(member, MemberVo.class);
-//    memberRepository.save(member);
-//    return member;
-//  }
-//
-//  @Override
-//  public void updateById(Long mbrNo, MemberVo member) {
-//    Optional<MemberVo> e = memberRepository.findById(mbrNo);
-//    if (e.isPresent()) {
-//      e.get().setMbrNo(member.getMbrNo());
-//      e.get().setId(member.getId());
-//      e.get().setName(member.getName());
-//      memberRepository.save(member);
-//    }
-//  }
 }

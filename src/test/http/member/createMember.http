@@ -1,0 +1,35 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+POST http://localhost:8080/member/create
+Content-Type: application/json
+
+{
+  "id" : "jjjddd",
+  "name" : "김지현sddsd"
+}
+
+###
+POST http://localhost:8080/api/account
+Content-Type: application/json
+
+{
+  "loginId": "fromc2",
+  "password": "fromc2019!",
+  "username": "아이엠폼2",
+  "avatar": {
+    "bucketName": "ifd-fromc",
+    "fileName": "image.png",
+    "fileKey": "2HO3hDZY8IpylnBQlB4N20190729031217685507",
+    "fileMetadata": {
+      "contentType": "image/webp",
+      "contentLength": 2870
+    }
+  }
+}
+
+###

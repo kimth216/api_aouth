@@ -1,0 +1,13 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/member
+Content-Type: application/json
+//Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJMT0dJTl9JRCI6ImZyb21jIiwiaXNzIjoiaHR0cHM6Ly93d3cuZnJvbWMuY29tIiwiVVNFUl9OQU1FIjoi6rSA66as7J6QIiwiZXhwIjoxNTc1MjczMTE1LCJVU0VSX1JPTEUiOiJST0xFX0FETUlOIiwiaWF0IjoxNTc0NjY4MzE1fQ.3bxJPn6-4TnJWq9q5ZYOO_lUwbMBy1fu45ziPdObNA8
+
+###
