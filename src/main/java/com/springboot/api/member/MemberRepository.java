@@ -10,10 +10,10 @@ import java.util.List;
  * Created by TaeHyoung Kim on 2020-07-21
 **/
 @Repository
-public interface MemberRepository extends JpaRepository<MemberVo, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
 
-  public List<MemberVo> findById(String id);
-  public List<MemberVo> findByName(String name); //like검색도 가능
-  public List<MemberVo> findByNameLike(String keyword);
+  public List<Member> findById(String id);
+  public List<Member> findByName(String name); //like검색도 가능
+  public List<Member> findByNameLike(String keyword);
 }
 
