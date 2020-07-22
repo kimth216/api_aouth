@@ -1,6 +1,9 @@
 HELP.md
 .gradle
+
+# ignore all files in the build/ directory
 build/
+
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -32,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### properties ###
+application.oauth.properties

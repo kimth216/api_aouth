@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  * SwaggerConfig 
- * Created by TaeHyeong Kim on 2020-07-21
+ * Created by TaeHyeong Kim on 2020-07-22
 **/
 @Configuration
 @EnableSwagger2
