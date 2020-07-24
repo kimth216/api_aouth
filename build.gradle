@@ -51,3 +51,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+bootJar {
+    mainClassName = 'com.springboot.api.ApiApplication'
+}
+
