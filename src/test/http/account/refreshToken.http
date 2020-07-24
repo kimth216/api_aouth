@@ -1,0 +1,15 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:8080/api/accounts/authorize?grant_type=refresh_token&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVU0VSX1BIT05FIjoiMDEwMTExMTIyMjIiLCJMT0dJTl9JRCI6ImFkbWluIiwiaXNzIjoiaHR0cHM6Ly93d3cuZnJvbS1jLmNvLmtyIiwiVVNFUl9OQU1FIjoi6rSA66as7J6QIiwiZXhwIjoxNTk2MjE2MTY5LCJVU0VSX1JPTEUiOiJST0xFX0FETUlOIiwiaWF0IjoxNTk1NjExMzY5fQ.H0YgLEDDPvNUFmBY_jbvKiAOk_IjfKEboA71yRfQqao&refresh_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVU0VSX1BIT05FIjoiMDEwMTExMTIyMjIiLCJMT0dJTl9JRCI6ImFkbWluIiwiaXNzIjoiaHR0cHM6Ly93d3cuZnJvbS1jLmNvLmtyIiwiVVNFUl9OQU1FIjoi6rSA66as7J6QIiwiZXhwIjoxNTk2OTA3MzY5LCJVU0VSX1JPTEUiOiJST0xFX0FETUlOIiwiaWF0IjoxNTk1NjExMzY5fQ.3Y868zT4-cyL-SL-w6vyVATUmgYn47UfEsg-QUA78qo
+Accept: application/json
+
+###
+GET http://localhost:8080/api/accounts/authorize?grant_type=refresh_token&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJMT0dJTl9JRCI6ImZyb21jIiwiaXNzIjoiaHR0cHM6Ly93d3cuZnJvbWMuY29tIiwiZXhwIjoxNTY0MjQ1NDM0LCJVU0VSX1JPTEUiOiJST0xFX0FETUlOIiwiaWF0IjoxNTYzNjQwNjM0fQ.G4LbiozIAS70C8N7U5sQPWyySNRLLPv_vNBogleggKU&refresh_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJMT0dJTl9JRCI6ImZyb21jIiwiaXNzIjoiaHR0cHM6Ly93d3cuZnJvbWMuY29tIiwiZXhwIjoxNTY0OTM2NjM0LCJVU0VSX1JPTEUiOiJST0xFX0FETUlOIiwiaWF0IjoxNTYzNjQwNjM0fQ.-PMwV7O59Zb1RyOJfmDPh8w3nQAhiziE2GS60oYdFOk
+Accept: application/json
+
+###
