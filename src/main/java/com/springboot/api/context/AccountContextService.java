@@ -9,8 +9,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Munsu Seo on 2019-05-07
- */
+ * AccountContextService 
+ * Created by TaeHyeong Kim on 2020-07-26
+**/
 @Component(value = "accountContextService")
 @RequiredArgsConstructor
 public class AccountContextService implements UserDetailsService {

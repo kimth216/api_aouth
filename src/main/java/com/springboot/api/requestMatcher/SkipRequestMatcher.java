@@ -17,6 +17,8 @@ import static org.springframework.http.HttpMethod.POST;
  * SkipRequestMatcher
  * Created by TaeHyeong Kim on 2020-07-24
 **/
+
+// 하위 목록은 인증 무시 ( = 항상통과 )
 @Getter
 @AllArgsConstructor
 public enum  SkipRequestMatcher {

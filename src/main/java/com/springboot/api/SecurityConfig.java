@@ -48,6 +48,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     return super.authenticationManagerBean();
   }
 
+  // 로그인 인증 절차
   private AccountLoginFilter accountLoginFilter() throws Exception {
     AccountLoginFilter filter = new AccountLoginFilter(
         SkipRequestMatcher.LOGIN.getUrl(),
@@ -65,6 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     return filter;
   }
 
+  // 리프레시 토큰 발급 절차
   private AccountJwtRefreshAuthenticationFilter accountJwtRefreshAuthenticationFilter() throws Exception {
 
     AccountJwtRefreshAuthenticationFilter filter = new AccountJwtRefreshAuthenticationFilter(
@@ -92,9 +94,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     httpSecurity.csrf().disable();
     httpSecurity.headers().frameOptions().disable();
     httpSecurity
+                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(accountLoginFilter(), UsernamePasswordAuthenticationFilter.class)
                 .addFilterBefore(accountJwtRefreshAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+
     ;
   }
 }

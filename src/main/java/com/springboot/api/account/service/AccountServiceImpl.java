@@ -9,8 +9,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by Munsu Seo on 2019-05-07
- */
+ * AccountServiceImpl 
+ * Created by TaeHyeong Kim on 2020-07-28
+**/
 @Service
 @RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {

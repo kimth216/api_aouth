@@ -20,6 +20,8 @@ import java.io.IOException;
  * AccountLoginFilter 
  * Created by TaeHyeong Kim on 2020-07-23
 **/
+
+//요청을 가로첼 수 있는 필터
 public class AccountLoginFilter extends AbstractAuthenticationProcessingFilter {
 
   private AuthenticationSuccessHandler authenticationSuccessHandler;
@@ -34,6 +36,7 @@ public class AccountLoginFilter extends AbstractAuthenticationProcessingFilter {
     this.authenticationFailureHandler = authenticationFailureHandler;
   }
 
+  //Performing authentication
   @Override
   public Authentication attemptAuthentication(HttpServletRequest request,
                                               HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
@@ -42,6 +45,7 @@ public class AccountLoginFilter extends AbstractAuthenticationProcessingFilter {
     return super.getAuthenticationManager().authenticate(token);
   }
 
+  //Authentication Successful
   @Override
   protected void successfulAuthentication(final HttpServletRequest req,
                                           final HttpServletResponse res,
@@ -50,12 +54,17 @@ public class AccountLoginFilter extends AbstractAuthenticationProcessingFilter {
     this.authenticationSuccessHandler.onAuthenticationSuccess(req, res, authResult);
   }
 
+
+  //In case of authentication failure
   @Override
   protected void unsuccessfulAuthentication(final HttpServletRequest req,
                                             final HttpServletResponse res,
                                             final AuthenticationException failed) throws IOException, ServletException {
     this.authenticationFailureHandler.onAuthenticationFailure(req, res, failed);
   }
+
+
+
 
 
 }
