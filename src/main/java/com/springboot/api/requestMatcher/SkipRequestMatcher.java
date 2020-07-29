@@ -27,12 +27,13 @@ public enum  SkipRequestMatcher {
   JOIN(POST, "/api/account", "Account Join"),
   LOGIN(POST, "/api/accounts/login", "Account Login"),
   REFRESH_TOKEN(GET, "/api/accounts/authorize", "Account Refresh Token"),
+
   SWAGGER_API_DOCS(GET, "/v2/api-docs", "Swagger default"),
+  SWAGGER(GET, "/swagger/**", "Swagger"),
   SWAGGER_CONFIGURATION(GET, "/configuration/**", "Swagger default"),
   SWAGGER_RESOURCE(GET, "/swagger-resources/**", "Swagger default"),
   SWAGGER_WEBJARS(GET, "/webjars/**", "Swagger default"),
   SWAGGER_UI(GET, "/swagger-ui.html", "Swagger default"),
-
   ;
   private HttpMethod method;
   private String url;

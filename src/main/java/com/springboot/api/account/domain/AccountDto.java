@@ -15,4 +15,15 @@ public class AccountDto {
     private String loginId;
     private Role role;
   }
+
+  @Getter
+  @Setter
+  public static class CreateAccount {
+    private String loginId;
+    private String password;
+    private String username;
+    private String phone;
+    private String email;
+    private Role role;
+  }
 }

@@ -2,11 +2,15 @@ package com.springboot.api.account.service;
 
 
 import com.springboot.api.account.domain.Account;
+import com.springboot.api.account.domain.AccountDto;
 import com.springboot.api.account.repository.AccountRepository;
 import com.springboot.api.exception.BadRequestException;
 import lombok.RequiredArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 /**
  * AccountServiceImpl 
@@ -20,6 +24,7 @@ public class AccountServiceImpl implements AccountService {
 
   private final PasswordEncoder passwordEncoder;
 
+  private final ModelMapper modelMapper;
 
 
   @Override
@@ -46,4 +51,22 @@ public class AccountServiceImpl implements AccountService {
     account.setLoginFailCount(0);
     accountRepository.save(account);
   }
+
+  @Override
+  public void createAccount(AccountDto.CreateAccount createAccount) {
+
+    if (isExistsByLoginId(createAccount.getLoginId())) {
+      throw new BadRequestException("이미 사용중인 ID 입니다.");
+    }else{
+      createAccount.setPassword(passwordEncoder.encode(createAccount.getPassword()));
+      accountRepository.save(modelMapper.map(createAccount, Account.class));
+    }
+  }
+
+
+  @Override
+  public boolean isExistsByLoginId(String loginId) {
+    return accountRepository.existsByLoginId(loginId);
+  }
+
 }
